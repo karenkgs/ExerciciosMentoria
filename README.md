@@ -1,2 +1,5 @@
-# ExerciciosMentoria
-Exercícios desenvolvidos durante a mentoria.
+# TDD Katas
+
+## Fizzbuzz
+
+1. [FizzBuzz](http://codingdojo.org/kata/FizzBuzz)
