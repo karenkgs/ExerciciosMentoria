@@ -10,13 +10,16 @@ package fizzbuzz;
 public class FizzBuzz {
     private String retorno = "";
     
-    String gerarResultado(int i) {
-        
+    public String gerarResultadoEstagio2(int i){
         for(int cont=1; cont<=i; cont++){
-            if((cont % 3) == 0){
+            
+            if(ehDivisivelPor(cont, 3) && ehDivisivelPor(cont, 5)){
+                retorno += "FizzBuzz";
+            } else if(ehDivisivelPor(cont, 3) || contemNumero(cont, "3")){
                 retorno += "Fizz";
+            } else if(ehDivisivelPor(cont, 5) || contemNumero(cont, "5")){
+                retorno += "Buzz";
             } else {
-                
                 retorno += cont;
             }
             
@@ -24,6 +27,33 @@ public class FizzBuzz {
         }
 
         return retorno;
+    }
+    
+    public String gerarResultado(int i) {
+        
+        for(int cont=1; cont<=i; cont++){
+            if(ehDivisivelPor(cont, 3) && ehDivisivelPor(cont, 5)){
+                retorno += "FizzBuzz";
+            } else if(ehDivisivelPor(cont, 3)){
+                retorno += "Fizz";
+            } else if(ehDivisivelPor(cont, 5)){
+                retorno += "Buzz";
+            } else {
+                retorno += cont;
+            }
+            
+            retorno += "\n";
+        }
+
+        return retorno;
+    }
+    
+    private boolean ehDivisivelPor(int num, int divisor){
+        return ((num % divisor) == 0);
+    }
+    
+    private boolean contemNumero(int num, String digito){
+        return String.valueOf(num).contains(digito);
     }
     
 }
