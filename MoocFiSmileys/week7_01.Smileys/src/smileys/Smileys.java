@@ -2,11 +2,6 @@ package smileys;
 
 public class Smileys {
     
-    //Mooc Fi:
-    //Create the support method private static void printWithSmileys(String characterString)
-    private static void printWithSmileys(String characterString){
-    }
-    
     public String printCharacterStringSurroundedBySmiles(String characterString){
         int characterStringLength = characterString.length();
         String characterStringSurroundedBySmiles = "";
